@@ -1,2 +1,4 @@
-# CS50_FlaskApp
-Finance Flask App made in CS50 Class 
+# Mock Finance Flask app
+## Made with Python, Sqlite, HTML/CSS, and Html templating done with Jinja
+
+Implemented Registering Page, TODO
