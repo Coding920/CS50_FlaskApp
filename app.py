@@ -300,6 +300,8 @@ def manage():
 
         elif form["direction"] == "withdraw":
             new_cash = user_info["cash"] - int(form["amount"])
+            if new_cash < 0:
+                return apology("Requested withdrawl is more than balance", 403)
             db.execute(""" UPDATE users SET cash=? WHERE id = ?""", new_cash, session["user_id"])
             flash("Withdrawn!")
             return redirect("/")
